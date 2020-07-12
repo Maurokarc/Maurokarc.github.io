@@ -50,11 +50,15 @@ const message = {
   _resume_professional_job2_item2_:
     "协助各个专案进行导入、定义开发框架，降低开发沟通成本",
   _resume_professional_job2_item3_: "确实掌握专案开发状况，进而降低专案风险",
-  _protfolio_item1_sumary_: "有过产生物件模型的经验",
-  _protfolio_item1_content1_: "资料表无痛转换C#物件模型",
-  _protfolio_item1_content2_: "支援INotifyPropertyChanged、EF6",
-  _protfolio_item1_content3_: "客制化栏位转换条件",
-  _protfolio_item1_content4_: "多种附加选项，如DataAnnotations、Prefix Pattern",
+  _protfolio_mapper_sumary_: "有過產生物件模型的經驗",
+  _protfolio_mapper_content1_: "資料表無痛轉換C#物件模型",
+  _protfolio_mapper_content2_: "支援INotifyPropertyChanged、EF6",
+  _protfolio_mapper_content3_: "客製化欄位轉換條件",
+  _protfolio_mapper_content4_: "多種附加選項，如DataAnnotations、Prefix Pattern",
+  _protfolio_backupper_sumary_: "資料庫備份自動排程",
+  _protfolio_backupper_content1_: "支援自定義執行間隔",
+  _protfolio_backupper_content2_: "可結合Email進行備份回報",
+  _protfolio_backupper_content3_: "備份硬碟空間不足時，系統自動壓縮備份檔案",
 };
 
 export default message;

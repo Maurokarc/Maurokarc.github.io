@@ -2,8 +2,7 @@
   <v-footer id="app-footer" absolute>
     <v-row justify="center">
       <v-col class="grey darken-4 py-2 text-center white--text">
-        {{ new Date().getFullYear() }} —
-        <strong>{{$t("_site_")}}</strong>
+        <strong>Contact Me !!</strong>
       </v-col>
     </v-row>
   </v-footer>

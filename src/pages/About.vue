@@ -25,34 +25,16 @@
         </v-row>
       </div>
     </section>
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-        <div class="section-title">
-          <h2>{{$t("_about_skill_")}}</h2>
-        </div>
-        <v-row>
-          <v-col cols="12" lg="6">
-            <skill-progress text="Backend : C# - Web API 2" :value="95"></skill-progress>
-            <skill-progress text="Frontend : Vue + Vuetify" :value="85"></skill-progress>
-            <skill-progress text="Desktop : C# - WindowsForms" :value="90"></skill-progress>
-          </v-col>
-          <v-col cols="12" lg="6">
-            <skill-progress text="Backend : PHP - Laravel" :value="75"></skill-progress>
-            <skill-progress text="Frontend : JQuery + Bootstrap" :value="75"></skill-progress>
-            <skill-progress text="Desktop : C# - WPF" :value="80"></skill-progress>
-          </v-col>
-        </v-row>
-      </div>
-    </section>
+    <skills-progress :showBackground="true"></skills-progress>
   </div>
 </template>
 
 <script>
-import SkillProgress from "../components/SkillProgress";
+import Skills from "../components/Skills";
 export default {
   name: "About",
   components: {
-    "skill-progress": SkillProgress
+    "skills-progress": Skills
   },
   computed: {
     site() {
