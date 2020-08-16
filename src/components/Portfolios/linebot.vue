@@ -4,19 +4,21 @@
       <v-col cols="12" md="6">
         <v-card id="protfolio-mapper" elevation="0">
           <v-card-title class="section-subtitle">
-            <h3>Database Backupper</h3>
+            <h3>Linetbot 管理後台</h3>
           </v-card-title>
           <v-card-subtitle>
-            <v-chip color="purple" class="ma-2 white--text">C# WinForms</v-chip>
-            <v-chip color="error" class="ma-2 white--text">Database</v-chip>
+            <v-chip color="rgb(79, 192, 141)" class="ma-2 white--text">Vue.js</v-chip>
+            <v-chip color="rgb(92, 187, 246)" class="ma-2 white--text">Vuetify</v-chip>
           </v-card-subtitle>
           <v-card-text>
             <h3>
-              <p>{{$t("_protfolio_backupper_sumary_")}}</p>
+              <p>
+                搭配Linebot API
+                <br />進行flexmessage的排版設定
+              </p>
               <ol>
-                <li>{{$t("_protfolio_backupper_content1_")}}</li>
-                <li>{{$t("_protfolio_backupper_content2_")}}</li>
-                <li>{{$t("_protfolio_backupper_content3_")}}</li>
+                <li>降低設定的複雜度</li>
+                <li>透過即時反應功能在設定的同時即可看到結果呈現</li>
               </ol>
             </h3>
           </v-card-text>
@@ -32,12 +34,13 @@
 
 <script>
 export default {
-  name: "portfolio-backupper",
+  name: "portfolio-linebot",
   props: {},
+  components: {},
   data() {
     return {
       showLightbox: false,
-      img: require("../../assets/images/backupper.png"),
+      img: require("../../assets/images/linebot.png"),
     };
   },
   created() {},

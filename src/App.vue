@@ -1,11 +1,14 @@
 <template>
   <v-app>
-    <v-container class="col-12 pa-0">
-      <app-header></app-header>
-      <v-main class="mx-auto">
-        <app-content></app-content>
-      </v-main>
-      <app-footer></app-footer>
+    <v-container>
+      <v-card elevation="0" class="bg-transparent">
+        <v-card-title>
+          <app-header></app-header>
+        </v-card-title>
+        <v-card-text :class="{'px-0': $vuetify.breakpoint.xs}">
+          <app-content></app-content>
+        </v-card-text>
+      </v-card>
     </v-container>
   </v-app>
 </template>
@@ -13,48 +16,44 @@
 <script>
 import header from "./layout/header";
 import content from "./layout/content";
-import footer from "./layout/footer";
+// import footer from "./layout/footer";
 
 export default {
   name: "App",
   components: {
     "app-header": header,
     "app-content": content,
-    "app-footer": footer
-  },
-  watch: {
-    $route: {
-      immediate: true,
-      handler(newRoute) {
-        document.title =
-          this.$t("_site_") + " - " + this.$t(newRoute.meta.title);
-      }
-    }
+    // "app-footer": footer,
   },
   data() {
     return {};
   },
   methods: {},
-  created() {},
-  mounted() {}
+  created() {
+    document.title = this.$t("_site_");
+  },
+  mounted() {},
 };
 </script>
 
 <style>
 #app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin: 0 0;
-  padding: 0 0;
+  font-size: 24px;
+  background: #f9f4ed;
 }
 *,
 *:before,
 *:after {
-  font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體",
-    sans-serif;
+  font-family: "Helvetica", "黑體-繁", "微軟正黑體", sans-serif;
   box-sizing: inherit;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.bg-transparent {
+  background: transparent !important;
 }
 /* "Open Sans", sans-serif; */
 </style>

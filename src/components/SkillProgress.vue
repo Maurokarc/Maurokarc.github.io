@@ -2,11 +2,11 @@
   <div>
     <v-row>
       <v-col class="text-left text-no-wrap py-0">
-        <h5>{{text}}</h5>
+        <h4>{{text}}</h4>
       </v-col>
       <v-spacer></v-spacer>
-      <v-col class="text-right py-0">
-        <h5>{{percent}}</h5>
+      <v-col class="text-right text-no-wrap py-0">
+        <h4>{{percent}}</h4>
       </v-col>
     </v-row>
     <v-row>
@@ -49,7 +49,7 @@ export default {
       return percent >= 80
         ? "primary"
         : percent >= 50
-        ? "warning"
+        ? "info"
         : "secondary";
     }
   },
