@@ -4,7 +4,7 @@
       <v-col cols="12" md="6">
         <v-card id="protfolio-mapper" elevation="0" class="fill-height">
           <v-card-title class="section-subtitle">
-            <h3>{{'Restful & Open API'}}</h3>
+            <h3>{{'WebAPI & SwaggerUI'}}</h3>
           </v-card-title>
           <v-card-subtitle>
             <v-chip color="purple" class="ma-2 white--text">C# .NET Core</v-chip>
@@ -12,13 +12,10 @@
           </v-card-subtitle>
           <v-card-text>
             <h3>
-              <p>
-                透過C#撰寫標準的RestfulAPI功能
-                <br />搭配Swagger進行呈現
-              </p>
+              <p>{{$t('_protfolio_openapi_content1_')}}</p>
               <ol>
-                <li>平易近人的API操作介面</li>
-                <li>方便使用者或開發者進行對接測試</li>
+                <li>{{$t('_protfolio_openapi_content2_')}}</li>
+                <li>{{$t('_protfolio_openapi_content3_')}}</li>
               </ol>
             </h3>
           </v-card-text>

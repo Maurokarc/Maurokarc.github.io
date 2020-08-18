@@ -22,7 +22,9 @@
 
             <v-card-subtitle>
               <h4>
-                <span>2020 年 3 月 - Present</span>
+                <span>{{$t('_resume_professional_job2_timeline_')}}</span>
+                <span class="mx-2">&#8226;</span>
+                <span>{{jobLifeTime}}</span>
               </h4>
             </v-card-subtitle>
             <v-card-text>
@@ -49,8 +51,9 @@
             </v-card-title>
             <v-card-subtitle>
               <h4>
-                <span>2017 年 9 月 - 2020 年 2 月</span>
-                <span>2 年 6 個月</span>
+                <span>{{$t('_resume_professional_job1_timeline_')}}</span>
+                <span class="mx-2">&#8226;</span>
+                <span>{{$t('_resume_professional_job1_timestamp_')}}</span>
               </h4>
             </v-card-subtitle>
             <v-card-text>
@@ -88,7 +91,9 @@
 
               <v-card-subtitle>
                 <h4>
-                  <span>2020 年 3 月 - Present</span>
+                  <span>{{$t('_resume_professional_job2_timeline_')}}</span>
+                  <span class="mx-2">&#8226;</span>
+                  <span>{{jobLifeTime}}</span>
                 </h4>
               </v-card-subtitle>
               <v-card-text>
@@ -124,8 +129,9 @@
               </v-card-title>
               <v-card-subtitle>
                 <h4>
-                  <span>2017 年 9 月 - 2020 年 2 月</span>
-                  <span>2 年 6 個月</span>
+                  <span>{{$t('_resume_professional_job1_timeline_')}}</span>
+                  <span class="mx-2">&#8226;</span>
+                  <span>{{$t('_resume_professional_job1_timestamp_')}}</span>
                 </h4>
               </v-card-subtitle>
               <v-card-text>
@@ -149,18 +155,18 @@
 export default {
   name: "section-experience",
   data() {
-    return { e13: "" };
+    return {};
   },
   computed: {
-    mailLink() {
-      return this.$store.state.mail ? `mailto:${this.$store.state.mail}` : null;
-    },
-    age() {
-      return (
-        parseInt(
-          (new Date() - new Date("1994/09/09")) / 1000 / 60 / 60 / 24 / 365
-        ) + 1
-      );
+    jobLifeTime() {
+      let src = new Date();
+      let dst = new Date("2020/03");
+      let months = (src.getFullYear() - dst.getFullYear()) * 12;
+      months -= dst.getMonth();
+      months += src.getMonth() + 1;
+      let year = parseInt(months / 12);
+      if (year > 0) return `${year} ${this.$t("_year_")} ${months % 12} ${this.$t("_at_")}${this.$t("_month_")} `;
+      else return `${months % 12} ${this.$t("_at_")}${this.$t("_month_")} `;
     },
   },
   mounted() {},

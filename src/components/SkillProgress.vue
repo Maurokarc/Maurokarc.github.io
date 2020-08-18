@@ -11,12 +11,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-progress-linear
-          height="10"
-          :value="value"
-          :max="maxVal"
-          :color="variant"
-        ></v-progress-linear>
+        <v-progress-linear height="10" :value="value" :max="maxVal" :color="variant"></v-progress-linear>
       </v-col>
     </v-row>
   </div>
@@ -28,16 +23,16 @@ export default {
   props: {
     maxVal: {
       type: Number,
-      default: 100
+      default: 100,
     },
     value: {
       type: Number,
-      required: true
+      required: true,
     },
     text: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {},
   computed: {
@@ -46,13 +41,9 @@ export default {
     },
     variant() {
       let percent = ((this.value || 0) / (this.maxVal || 100)) * 100;
-      return percent >= 80
-        ? "primary"
-        : percent >= 50
-        ? "info"
-        : "secondary";
-    }
+      return percent >= 80 ? "primary" : percent >= 50 ? "info" : "warning";
+    },
   },
-  created() {}
+  created() {},
 };
 </script>
