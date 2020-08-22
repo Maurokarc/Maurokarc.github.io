@@ -15,7 +15,7 @@
         </v-hover>
       </v-col>
     </v-row>
-    <v-dialog v-model="isOpened" persistent :width="!$vuetify.breakpoint.xs? '50%':null">
+    <v-dialog v-model="$store.state.showConact" persistent max-width="500px">
       <ValidationObserver ref="observer">
         <v-card>
           <v-card-title class="headline">
@@ -109,7 +109,7 @@
                 <v-btn
                   class="mx-2"
                   depressed
-                  @click="isOpened = false"
+                  @click="$store.commit('showConact', false)"
                   :loading="isSending"
                   color="secondary"
                 >{{$t('_contact_cancel_')}}</v-btn>
@@ -135,7 +135,6 @@ export default {
   name: "app-footer",
   data() {
     return {
-      isOpened: false,
       isSending: false,
       canSend: false,
       title: "",
@@ -153,7 +152,7 @@ export default {
       this.email = "";
       this.message = "";
       if (this.$refs.observer) await this.$refs.observer.reset();
-      this.isOpened = true;
+      this.$store.commit("showConact", true);
       clearInterval(this.time);
       this.timer();
     },
@@ -175,7 +174,7 @@ export default {
       this.isSending = false;
       if (result.toLocaleLowerCase() == "ok") {
         await this.$alertSuccess(this.$t("_contact_send_success"));
-        this.isOpened = false;
+        this.$store.commit("showConact", false);
       } else {
         await this.$alertError(this.$t("_contact_send_fail"));
       }
@@ -204,7 +203,7 @@ export default {
 <style scoped>
 .text-section-line {
   letter-spacing: 0.2rem;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   border-bottom: 3px solid;
   display: inline-block;
 }
