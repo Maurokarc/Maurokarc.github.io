@@ -22,8 +22,12 @@
         </v-card>
       </v-col>
       <v-col cols="12" md="6">
-        <v-img class="clickable ma-4" :src="img" :aspect-ratio="16/9" @click="popupImg"></v-img>
-        <vue-easy-lightbox :visible="showLightbox" :imgs="[img]" @hide="hide"></vue-easy-lightbox>
+        <v-img
+          class="clickable ma-4"
+          :src="img"
+          :aspect-ratio="16/9"
+          @click="$store.commit('showLightBox', {show:true,img})"
+        ></v-img>
       </v-col>
     </v-row>
   </v-card>

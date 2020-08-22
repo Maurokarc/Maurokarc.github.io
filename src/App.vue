@@ -1,4 +1,4 @@
-<template>
+portfolio<template>
   <v-app>
     <v-container>
       <v-btn
@@ -22,6 +22,11 @@
       </v-card>
       <app-footer></app-footer>
     </v-container>
+    <vue-easy-lightbox
+      :visible="$store.state.lightBox.show"
+      :imgs="[$store.state.lightBox.img]"
+      @hide="$store.commit('showLightBox', {show:false})"
+    ></vue-easy-lightbox>
   </v-app>
 </template>
 
