@@ -6,9 +6,11 @@ import vuetify from "./plugins/vuetify";
 import alertPlugin from "./plugins/swalAlert";
 import validatePlugin from "./plugins/validate";
 import fasPlugin from "./plugins/fontawesome";
+import LoadScript from "vue-plugin-load-script";
 import Lightbox from "vue-easy-lightbox";
-Vue.use(Lightbox);
 
+Vue.use(LoadScript);
+Vue.use(Lightbox);
 
 /* Plugins */
 Vue.use(alertPlugin);
@@ -19,5 +21,5 @@ new Vue({
   i18n,
   store,
   vuetify,
-  render: (h) => h(App),
+  render: h => h(App)
 }).$mount("#app");

@@ -1,4 +1,7 @@
+import validations from "./validation";
+
 const message = {
+  validations,
   _about_: "關於",
   _about_context: "曾任職於致茂電子擔任MES軟體工程師，主要負責為洽談客戶需求、訂定系統操作流程、功能整合等。",
   _about_skill_: "技術能力",
@@ -41,6 +44,14 @@ const message = {
   _resume_professional_job2_title_: "全端工程師",
   _site_: "Jack Chan",
   _year_: "年",
+  _contact_name_: "稱呼",
+  _contact_email_: "信箱",
+  _contact_title_: "主旨",
+  _contact_message_: "訊息",
+  _contact_cancel_: "取消",
+  _contact_confirm_: "送出",
+  _contact_send_success: "送出成功 !!",
+  _contact_send_fail: "寄送失敗，請稍後再試 .."
 };
 
 export default message;

@@ -12,6 +12,7 @@
           <app-content></app-content>
         </v-card-text>
       </v-card>
+      <app-footer></app-footer>
     </v-container>
   </v-app>
 </template>
@@ -19,14 +20,14 @@
 <script>
 import header from "./layout/header";
 import content from "./layout/content";
-// import footer from "./layout/footer";
+import footer from "./layout/footer";
 
 export default {
   name: "App",
   components: {
     "app-header": header,
     "app-content": content,
-    // "app-footer": footer,
+    "app-footer": footer,
   },
   data() {
     return {

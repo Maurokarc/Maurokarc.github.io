@@ -105,8 +105,8 @@ export default {
   components: {},
   data: () => ({
     isDrawerOpened: false,
-    langs: [],
     langsOpened: false,
+    langs: [],
   }),
   computed: {},
   methods: {

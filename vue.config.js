@@ -1,3 +1,5 @@
+process.env.VUE_APP_SMTP_TOKEN = require('./Environment.json').smtpToken
+
 module.exports = {
   filenameHashing: false,
   chainWebpack: (config) => {
