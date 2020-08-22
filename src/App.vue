@@ -1,11 +1,14 @@
 <template>
   <v-app>
     <v-container>
+      <v-fade-transition>
+        <v-btn v-scroll="onScroll" v-show="fab" fab dark fixed bottom right small @click="toTop">
+          <v-icon>mdi-arrow-up</v-icon>
+        </v-btn>
+      </v-fade-transition>
+      <app-header></app-header>
       <v-card elevation="0" class="bg-transparent">
-        <v-card-title>
-          <app-header></app-header>
-        </v-card-title>
-        <v-card-text :class="{'px-0': $vuetify.breakpoint.xs}">
+        <v-card-text>
           <app-content></app-content>
         </v-card-text>
       </v-card>
@@ -26,9 +29,20 @@ export default {
     // "app-footer": footer,
   },
   data() {
-    return {};
+    return {
+      fab: false,
+    };
   },
-  methods: {},
+  methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > parseInt(document.body.scrollHeight * 0.1);
+    },
+    toTop() {
+      this.$vuetify.goTo(0);
+    },
+  },
   created() {
     document.title = this.$t("_site_");
   },

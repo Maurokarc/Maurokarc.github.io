@@ -7,7 +7,13 @@
         </div>
         <v-row>
           <v-col cols="12" sm="2" class="d-flex">
-            <v-img :aspect-ratio="1" style="border-radius:50%;" contain :src="img" />
+            <v-img
+              :aspect-ratio="1"
+              style="border-radius:50%;"
+              :class="{'img-max-on-xs':$vuetify.breakpoint.xs}"
+              contain
+              :src="img"
+            />
           </v-col>
           <v-col cols="12" sm="10">
             <h1 :class="{'text-center': $vuetify.breakpoint.xs}">{{$t("_name_")}}</h1>
@@ -53,3 +59,12 @@ export default {
 </script>
 
 <style scoped src="../assets/css/section.css"></style>
+
+<style scoped>
+.img-max-on-xs {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 230px;
+  max-width: 230px;
+}
+</style>

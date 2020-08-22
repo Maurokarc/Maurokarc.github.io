@@ -21,7 +21,7 @@ const message = {
   _protfolio_mapper_content2_: "支援INotifyPropertyChanged、EF6",
   _protfolio_mapper_content3_: "客製化欄位轉換條件",
   _protfolio_mapper_content4_: "多種附加選項，如DataAnnotations、Prefix Pattern",
-  _protfolio_mapper_sumary_: "有過產生物件模型的經驗",
+  _protfolio_mapper_sumary_: "資料庫物件模型轉換",
   _protfolio_openapi_content1_: "基於RestfulAPI的呈現",
   _protfolio_openapi_content2_: "標準的WebAPI測試接口(OAS)",
   _protfolio_openapi_content3_: "直接性的降低維護成本(無須撰寫說明文件)",

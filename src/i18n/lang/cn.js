@@ -21,7 +21,7 @@ const message = {
   _protfolio_mapper_content2_: "支援INotifyPropertyChanged、EF6",
   _protfolio_mapper_content3_: "客制化栏位转换条件",
   _protfolio_mapper_content4_: "多种附加选项，如DataAnnotations、Prefix Pattern",
-  _protfolio_mapper_sumary_: "有过产生物件模型的经验",
+  _protfolio_mapper_sumary_: "资料库物件模型转换",
   _protfolio_openapi_content1_: "基于RestfulAPI的呈现",
   _protfolio_openapi_content2_: "标准的WebAPI测试接口(OAS)",
   _protfolio_openapi_content3_: "直接性的降低维护成本(无须撰写说明文件)",
