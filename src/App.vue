@@ -1,11 +1,19 @@
 <template>
   <v-app>
     <v-container>
-      <v-fade-transition>
-        <v-btn v-scroll="onScroll" v-show="fab" fab dark fixed bottom right small @click="toTop">
-          <v-icon>mdi-arrow-up</v-icon>
-        </v-btn>
-      </v-fade-transition>
+      <v-btn
+        fab
+        dark
+        fixed
+        bottom
+        right
+        small
+        @click="toTop"
+        data-aos="fade-down"
+        data-aos-once="false"
+      >
+        <v-icon>mdi-arrow-up</v-icon>
+      </v-btn>
       <app-header></app-header>
       <v-card elevation="0" class="bg-transparent">
         <v-card-text>
@@ -35,13 +43,13 @@ export default {
     };
   },
   methods: {
-    onScroll(e) {
-      if (typeof window === "undefined") return;
-      const top = window.pageYOffset || e.target.scrollTop || 0;
-      this.fab = top > parseInt(document.body.scrollHeight * 0.1);
-    },
     toTop() {
       this.$vuetify.goTo(0);
+    },
+  },
+  computed: {
+    arrowOffset() {
+      return parseInt(document.body.scrollHeight * 0.1);
     },
   },
   created() {
@@ -55,6 +63,7 @@ export default {
 #app {
   text-align: center;
   font-size: 24px;
+  overflow: hidden;
   background: #f9f4ed;
 }
 *,

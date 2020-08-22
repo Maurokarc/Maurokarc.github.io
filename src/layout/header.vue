@@ -2,28 +2,28 @@
   <v-container>
     <v-row v-if="!$vuetify.breakpoint.xs">
       <v-spacer></v-spacer>
-      <v-col>
-        <span class="text-left text-no-wrap clickable" @click="$vuetify.goTo('#about')">
+      <v-col data-aos="fade-down">
+        <span class="text-no-wrap clickable" @click="$vuetify.goTo('#about')">
           <h3>{{$t('_about_')}}</h3>
         </span>
       </v-col>
-      <v-col>
-        <span class="text-left text-no-wrap clickable" @click="$vuetify.goTo('#experience')">
+      <v-col data-aos="fade-down">
+        <span class="text-no-wrap clickable" @click="$vuetify.goTo('#experience')">
           <h3>{{$t('_resume_professional_')}}</h3>
         </span>
       </v-col>
-      <v-col>
-        <span class="text-left text-no-wrap clickable" @click="$vuetify.goTo('#skill')">
+      <v-col data-aos="fade-down">
+        <span class="text-no-wrap clickable" @click="$vuetify.goTo('#skill')">
           <h3>{{$t('_about_skill_')}}</h3>
         </span>
       </v-col>
-      <v-col>
-        <span class="text-left text-no-wrap clickable" @click="$vuetify.goTo('#portfolio')">
+      <v-col data-aos="fade-down">
+        <span class="text-no-wrap clickable" @click="$vuetify.goTo('#portfolio')">
           <h3>{{$t('_portfolio_')}}</h3>
         </span>
       </v-col>
       <v-spacer></v-spacer>
-      <v-col cols="auto" class="text-right">
+      <v-col cols="auto" class="text-right" data-aos="fade-down">
         <v-menu offset-y right origin="center center" transition="scale-transition">
           <template v-slot:activator="{ on, attrs }">
             <v-btn icon v-bind="attrs" v-on="on">
@@ -39,7 +39,7 @@
       </v-col>
     </v-row>
     <template v-else>
-      <v-app-bar app flat right style=" background:#f9f4ed">
+      <v-app-bar app flat right style="background:#f9f4ed">
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click.stop="isDrawerOpened = !isDrawerOpened"></v-app-bar-nav-icon>
       </v-app-bar>
@@ -57,7 +57,7 @@
                 <v-menu offset-y right origin="center center" transition="scale-transition">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn icon v-bind="attrs" v-on="on">
-                      <font-awesome-icon :icon="['fas', 'globe-americas']"  size="lg"/>
+                      <font-awesome-icon :icon="['fas', 'globe-americas']" size="lg" />
                     </v-btn>
                   </template>
                   <v-list>

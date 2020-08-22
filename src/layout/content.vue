@@ -1,9 +1,15 @@
 <template>
   <div id="app-content">
-    <app-about></app-about>
-    <app-experience></app-experience>
-    <app-skill></app-skill>
-    <app-portfolio></app-portfolio>
+    <app-about data-aos="fade-in"></app-about>
+    <app-experience
+      :data-aos="!$vuetify.breakpoint.xs?'fade-left':'fade-down'"
+      :data-aos-delay="!$vuetify.breakpoint.xs?250:0"
+    ></app-experience>
+    <app-skill
+      :data-aos="!$vuetify.breakpoint.xs?'fade-right':'fade-down'"
+      :data-aos-delay="!$vuetify.breakpoint.xs?500:0"
+    ></app-skill>
+    <app-portfolio :data-aos="!$vuetify.breakpoint.xs?'zoom-out':'fade-down'"></app-portfolio>
   </div>
 </template>
 

@@ -8,6 +8,8 @@ import validatePlugin from "./plugins/validate";
 import fasPlugin from "./plugins/fontawesome";
 import LoadScript from "vue-plugin-load-script";
 import Lightbox from "vue-easy-lightbox";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 Vue.use(LoadScript);
 Vue.use(Lightbox);
@@ -21,5 +23,9 @@ new Vue({
   i18n,
   store,
   vuetify,
-  render: h => h(App)
+  render: h => h(App),
+  created: AOS.init({
+    duration: 1200,
+    once: true
+  })
 }).$mount("#app");
