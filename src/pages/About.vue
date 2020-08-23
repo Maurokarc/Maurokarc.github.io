@@ -30,14 +30,14 @@
         </v-row>
         <v-row class="mt-2">
           <v-spacer></v-spacer>
-          <a href="https://www.facebook.com/profile.php?id=100002826589073" target="_blank">
-            <font-awesome-icon class="mx-1" :icon="['fab', 'facebook']" size="2x" />
+          <a href="https://www.facebook.com/profile.php?id=100002826589073" target="_blank" class="scaling">
+            <font-awesome-icon class="mx-1 rotating" :icon="['fab', 'facebook']" size="2x" />
           </a>
-          <a href="https://github.com/Maurokarc" style="color:black" target="_blank">
-            <font-awesome-icon class="mx-1" :icon="['fab', 'github']" size="2x" />
+          <a href="https://github.com/Maurokarc" style="color:black" target="_blank" class="scaling">
+            <font-awesome-icon class="mx-1 rotating" :icon="['fab', 'github']" size="2x" />
           </a>
-          <a href="https://www.linkedin.com/in/jack-chan-6b5347194/" target="_blank">
-            <font-awesome-icon class="mx-1" :icon="['fab', 'linkedin']" size="2x" />
+          <a href="https://www.linkedin.com/in/jack-chan-6b5347194/" target="_blank" class="scaling">
+            <font-awesome-icon class="mx-1 rotating" :icon="['fab', 'linkedin']" size="2x" />
           </a>
         </v-row>
       </div>
@@ -66,5 +66,28 @@ export default {
   margin-right: auto;
   max-height: 230px;
   max-width: 230px;
+}
+.scaling:hover {
+  transition: transform .5s;
+  transform: scale(1.3); 
+}
+
+.rotating:hover {
+   animation: shake 1s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 </style>
