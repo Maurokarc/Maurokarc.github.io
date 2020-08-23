@@ -8,7 +8,7 @@
         <v-col>
           <skill-progress text="Backend : C# - Web API 2" :value="92"></skill-progress>
           <skill-progress text="Backend : PHP - Laravel" :value="77"></skill-progress>
-          <skill-progress text="Frontend : Vue + Vuetify" :value="85"></skill-progress>
+          <skill-progress text="Frontend : Vue + Vuetify" :value="89"></skill-progress>
           <skill-progress text="Frontend : JQuery + Bootstrap" :value="72"></skill-progress>
           <skill-progress text="Desktop : C# - WindowsForms" :value="96"></skill-progress>
           <skill-progress text="Desktop : C# - WPF" :value="86"></skill-progress>

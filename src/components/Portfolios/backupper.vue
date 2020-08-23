@@ -16,7 +16,6 @@
               <ol>
                 <li>{{$t("_protfolio_backupper_content1_")}}</li>
                 <li>{{$t("_protfolio_backupper_content2_")}}</li>
-                <li>{{$t("_protfolio_backupper_content3_")}}</li>
               </ol>
             </h3>
           </v-card-text>

@@ -141,7 +141,7 @@ export default {
       name: "",
       email: "",
       message: "",
-      sessionTime: 30,
+      sessionTime: 20,
       time: null,
     };
   },
@@ -169,7 +169,7 @@ export default {
         To: "MauroKarc@gmail.com",
         From: this.email,
         Subject: `[Github.io] ${this.title}`,
-        Body: this.message,
+        Body: `<html><h3>Message from :${this.name}</h3><br>${this.message}</html>`,
       });
       this.isSending = false;
       if (result.toLocaleLowerCase() == "ok") {
@@ -182,7 +182,7 @@ export default {
     timer() {
       let vm = this;
       vm.canSend = false;
-      vm.sessionTime = 30;
+      vm.sessionTime = 20;
       this.time = setInterval(() => {
         vm.sessionTime--;
         if (!vm.canSend && vm.sessionTime === 0) vm.canSend = true;
