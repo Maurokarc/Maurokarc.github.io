@@ -2,7 +2,7 @@
   <v-card elevation="0">
     <v-row>
       <v-col cols="12" md="6">
-        <v-card id="protfolio-mapper" elevation="0" class="fill-height">
+        <v-card id="portfolio-mapper" elevation="0" class="fill-height">
           <v-card-title class="section-subtitle">
             <h3>{{'WebAPI & SwaggerUI'}}</h3>
           </v-card-title>
@@ -12,13 +12,23 @@
           </v-card-subtitle>
           <v-card-text>
             <h3>
-              <p>{{$t('_protfolio_openapi_content1_')}}</p>
+              <p>{{$t('_portfolio_openapi_summary_')}}</p>
               <ol>
-                <li>{{$t('_protfolio_openapi_content2_')}}</li>
-                <li>{{$t('_protfolio_openapi_content3_')}}</li>
+                <li>{{$t('_portfolio_openapi_content1_')}}</li>
+                <li>{{$t('_portfolio_openapi_content2_')}}</li>
               </ol>
             </h3>
           </v-card-text>
+          <v-card-actions>
+            <a
+              href="https://github.com/Maurokarc/ASP.NET-Core-WebAPI"
+              style="color:black"
+              target="_blank"
+              class="scaling"
+            >
+              <font-awesome-icon class="mx-1 rotating" :icon="['fab', 'github']" size="2x" />
+            </a>
+          </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="12" md="6">
