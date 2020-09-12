@@ -2,7 +2,7 @@
   <v-card elevation="0">
     <v-row>
       <v-col cols="12" md="6">
-        <v-card id="protfolio-mapper" elevation="0">
+        <v-card id="portfolio-mapper" elevation="0">
           <v-card-title class="section-subtitle">
             <h3>Linetbot Management</h3>
           </v-card-title>
@@ -12,10 +12,10 @@
           </v-card-subtitle>
           <v-card-text>
             <h3>
-              <p>{{$t('_protfolio_linebot_content1_')}}</p>
+              <p>{{$t('_portfolio_linebot_summary_')}}</p>
               <ol>
-                <li>{{$t('_protfolio_linebot_content2_')}}</li>
-                <li>{{$t('_protfolio_linebot_content3_')}}</li>
+                <li>{{$t('_portfolio_linebot_content1_')}}</li>
+                <li>{{$t('_portfolio_linebot_content2_')}}</li>
               </ol>
             </h3>
           </v-card-text>

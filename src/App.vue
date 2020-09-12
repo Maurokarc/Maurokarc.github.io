@@ -20,7 +20,7 @@ portfolio<template>
           <app-content></app-content>
         </v-card-text>
       </v-card>
-      <app-footer></app-footer>
+      <app-footer style="background: #f9f4ed!important;"></app-footer>
     </v-container>
     <vue-easy-lightbox
       :visible="$store.state.lightBox.show"
