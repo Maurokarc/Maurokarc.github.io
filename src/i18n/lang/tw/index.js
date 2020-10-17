@@ -3,7 +3,11 @@ import validations from "./validation";
 const message = {
   validations,
   _about_: "關於",
-  _about_context: "曾任職於致茂電子擔任MES軟體工程師，主要負責為洽談客戶需求、訂定系統操作流程、功能整合等。",
+  _about_context_1: '你好，我是詹竣皓',
+  _about_context_2: '是一個全端工程師，擁有三年多的工作經驗',
+  _about_context_3: '前兩年半主要是在做MES，負責MES整體生產流程(WIP)',
+  _about_context_4: '之後轉任全端工程師，後端主要是C#、PHP，前端的部分則是Vuejs、JQuery',
+  _about_context_5: '個性的部分比較隨和、勇於嘗試不同的新事物',
   _about_skill_: "技術能力",
   _about_tip1_: "注重於專案的架構規劃與團隊溝通",
   _about_tip2_: "致力於程式碼的可讀性、可擴展性",

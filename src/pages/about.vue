@@ -3,27 +3,29 @@
     <section id="about">
       <div class="container">
         <div class="section-title">
-          <h2>{{$t("_about_")}}</h2>
+          <h2>{{ $t("_about_") }}</h2>
         </div>
         <v-row>
           <v-col cols="12" sm="2" class="d-flex">
-            <v-img
-              :aspect-ratio="1"
-              style="border-radius:50%;"
-              :class="{'img-max-on-xs':$vuetify.breakpoint.xs}"
-              contain
-              :src="img"
-            />
+            <v-img :aspect-ratio="1" style="border-radius: 50%" :class="{ 'img-max-on-xs': $vuetify.breakpoint.xs }" contain :src="img" />
           </v-col>
           <v-col cols="12" sm="10">
-            <h1 :class="{'text-center': $vuetify.breakpoint.xs}">{{$t("_name_")}}</h1>
+            <h1 :class="{ 'text-center': $vuetify.breakpoint.xs }">{{ $t("_name_") }}</h1>
             <br />
-            <h2>{{$t('_about_context')}}</h2>
+            <h2>
+              <p>
+                {{ $t("_about_context_1") }}<br />
+                {{ $t("_about_context_2") }}<br />
+                {{ $t("_about_context_3") }}<br />
+                {{ $t("_about_context_4") }}<br />
+                {{ $t("_about_context_5") }}<br />
+              </p>
+            </h2>
             <br />
             <h3>
               <ul>
-                <li>{{$t('_about_tip1_')}}</li>
-                <li>{{$t('_about_tip2_')}}</li>
+                <li>{{ $t("_about_tip1_") }}</li>
+                <li>{{ $t("_about_tip2_") }}</li>
               </ul>
             </h3>
           </v-col>
@@ -33,7 +35,7 @@
           <a href="https://www.facebook.com/profile.php?id=100002826589073" target="_blank" class="scaling">
             <font-awesome-icon class="mx-1 rotating" :icon="['fab', 'facebook']" size="2x" />
           </a>
-          <a href="https://github.com/Maurokarc" style="color:black" target="_blank" class="scaling">
+          <a href="https://github.com/Maurokarc" style="color: black" target="_blank" class="scaling">
             <font-awesome-icon class="mx-1 rotating" :icon="['fab', 'github']" size="2x" />
           </a>
           <a href="https://www.linkedin.com/in/jack-chan-6b5347194/" target="_blank" class="scaling">
@@ -68,26 +70,51 @@ export default {
   max-width: 230px;
 }
 .scaling:hover {
-  transition: transform .5s;
-  transform: scale(1.3); 
+  transition: transform 0.5s;
+  transform: scale(1.3);
 }
 
 .rotating:hover {
-   animation: shake 1s;
-   animation-iteration-count: infinite;
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+p {
+  line-height: 1.5em;
 }
 
 @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 </style>

@@ -3,7 +3,11 @@ import validations from "./validation";
 const message = {
   validations,
   _about_: "About",
-  _about_context: "Served as MES engineer at Chroma ATE Inc, Responsible for customer requirements, workflow, integration, etc.",
+  _about_context_1: "Hi, I'm Jack",
+  _about_context_2: "I'm a full-stack engineer, more than 3+ years experience",
+  _about_context_3: "Work on MES for the past 2 years, and then career move to full-stack engineer",
+  _about_context_4: "Using vuejs、JQuery on front-end, C#、PHP on the back-end",
+  _about_context_5: "I am an easy-going person and like to try something new",
   _about_skill_: "Skills",
   _about_tip1_: "Focussed on project architecture planning & team communication.",
   _about_tip2_: "Building the Project of readability and scalability.",
